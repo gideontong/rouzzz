@@ -8,10 +8,6 @@
  * 
  * Programmed by Gideon Tong, Andrew Chau,
  * James Wang, and Jeff Ding at SDHacks 2018.
- * 
- * No one will notice if someone says Jeff did
- * nothing because he won't even notice this
- * comment.
  */
 
 import React from 'react';
@@ -41,7 +37,7 @@ const RootStack = createStackNavigator(
     TimeFinder: TimeFinderScreen
   },
   {
-    initialRouteName: 'Loading',
+    initialRouteName: 'Loading...',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#fff',
