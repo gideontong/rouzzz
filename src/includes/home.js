@@ -12,10 +12,13 @@ import DatePicker from 'react-native-datepicker';
 
 export default class HomeScreen extends React.Component {
   num = 0;
-  // currLat = this.state.position.latitude;
-  // currLong = this.state.position.longitude;
-  currLat = 32.7157;
-  currLong = -117.1611;
+  // The following two codes work to set the homescreen map to the user's current location. However
+  // in order to ensure the hackathon demo works, we have included real-world coordinates for
+  // testing only.
+  currLat = this.state.position.latitude;
+  currLong = this.state.position.longitude;
+  // currLat = 32.7157;
+  // currLong = -117.1611;
 
 
   updateMarker = function(e) {
@@ -118,7 +121,7 @@ export default class HomeScreen extends React.Component {
           onPress={() => this.props.navigation.navigate('Alarm')}
         />
         <Button
-          title="Go to TimeFinder (Debug page)"
+          title="Go to Debug Menu"
           onPress={() => this.props.navigation.navigate('TimeFinder')}
         /> */}
       </View>
@@ -129,13 +132,8 @@ export default class HomeScreen extends React.Component {
   }
 }
 
+// This should be moved to style.js at first opportunity.
 const styles = StyleSheet.create({
-  // center_contained: {
-  //   flex: 1,
-  //   backgroundColor: '#fff',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
   container: {
     flex: 1,
     flexDirection: 'column',

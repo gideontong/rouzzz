@@ -1,3 +1,12 @@
+/*
+ * This debug menu is currently hidden from the rest of the class and is called TimeFinderScreen.
+ * You can access it by calling TimeFinder as well as any of the child classes and functions.
+ * It has not been removed from the source code so you can use it as well, the recommended method
+ * of accessing this screen is to add a button to the UI pointing to the menu (in alarm.js, there
+ * is a button that is commented out that you can simply uncomment.). Another way is to call it
+ * from the console while Expo is running in development mode.
+ */
+
 import React from 'react';
 import {
   ActivityIndicator,
@@ -13,26 +22,12 @@ export default class TimeFinderScreen extends React.Component {
     super(props);
     this.state = {
       isLoading: true,
-      appId: "ASP74kP1aWXMTUXMl9Z7",
-      appCode: "TTqYfk0ASNuvbY7R5GtUcg"
+      appId: "", // Put your HERE API app ID here.
+      appCode: "" // Put your HERE API app CODE here.
     };
   }
 
   componentWillMount() {
-    /*
-    return navigator.geolocation.getCurrentPosition((position) => {
-      this.setState({
-        position: {
-          longitude: position.coords.longitude,
-          latitude: position.coords.latitude
-        },
-        isLoading: false
-      });
-      console.log(this);
-    }, (error) => {
-      alert(JSON.stringify(error))
-    });
-    */
     this.setState({
       position: {
         latitude: 32.885483,

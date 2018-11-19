@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Button,
   Text,
   View
 } from 'react-native';
@@ -9,15 +8,15 @@ import styles from './style.js';
 
 export default class CountdownScreen extends React.Component {
 
-
   constructor(props) {
     super(props);
     const { navigation } = this.props;
     this.state = {
       isLoading: true,
-      appId: "ASP74kP1aWXMTUXMl9Z7",
-      appCode: "TTqYfk0ASNuvbY7R5GtUcg",
+      appId: "", // Add your own HERE API app ID here.
+      appCode: "", // Add your own HERE API app CODE here.
       position: {
+        // This needs to be changed to real-world coordinates when possible. (see home.js)
         latitude: 32.885483,
         longitude: -117.239150
       },
@@ -46,12 +45,9 @@ export default class CountdownScreen extends React.Component {
       + "&departure=" + timestamp;
     console.log("Now Requesting: " + uri);
 
-
-
     return fetch(uri)
       .then((response) => response.json())
       .then((responseJson) => {
-        //console.log(responseJson);
         this.setState({
           timeToGetReady: responseJson.response.route[0].summary.trafficTime
         }, function () {
@@ -96,7 +92,7 @@ export default class CountdownScreen extends React.Component {
         if (new Date(this.timestamp).getTime() >= this.state.wakeuptime) {
           this.props.navigation.navigate('Alarm')
         }
-        return { unseen: "does not display" }
+        return { unseen: "Doesn't Display!" }
       });
     }, 10000);
   }
