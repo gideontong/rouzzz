@@ -16,3 +16,5 @@ You can build the app for release on iOS with the `--configuration Release` runt
 ## Contributing
 
 This repository is a spin off of the original [SDHacks18](https://github.com/jamesbwang/SDHacks18) app with more file organization, and in the future, more features. You can pull from either repository and submit a pull request to either repository, but the intent of this one is to be more organized so future features can be added.
+
+The original app built at SD Hacks 2018 was made by [Gideon Tong](https://github.com/gideontong), [James Wang](https://github.com/jamesbwang), and [Andrew Chau](https://github.com/chauandrew) with additional minor contribution from [Jeffrey Ding](https://github.com/jeffding412). The current maintainer of this repository is Gideon Tong, whom you can contact at the email address listed on the GitHub profile page should you have any further questions about the application or contributing to the source code.

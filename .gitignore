@@ -1,3 +1,5 @@
-!gitignore
-rouzz\yarn.lock
-name-tbd
+src/node_modules/**/*
+src/.expo/*
+src/npm-debug.*
+src/package-lock.json
+src/yarn.lock
